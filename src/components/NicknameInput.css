@@ -1,0 +1,102 @@
+.nickname-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 26, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.nickname-form {
+  background: #1a1a2e;
+  padding: 2.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(350px, 90vw);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(100, 108, 255, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.nickname-title {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #646cff, #535bf2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nickname-input {
+  padding: 1em 1.2em;
+  border-radius: 12px;
+  border: 2px solid rgba(100, 108, 255, 0.3);
+  background: #111;
+  color: #fff;
+  font-size: 1.1em;
+  transition: all 0.2s ease;
+}
+
+.nickname-input:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+}
+
+.nickname-button {
+  padding: 1em 1.2em;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(145deg, #646cff, #535bf2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nickname-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+}
+
+.nickname-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .nickname-form {
+    padding: 2rem;
+  }
+
+  .nickname-title {
+    font-size: 1.8rem;
+  }
+
+  .nickname-input,
+  .nickname-button {
+    font-size: 1em;
+  }
+} 

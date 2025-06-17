@@ -1,0 +1,131 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  min-height: 100vh;
+  background: #0f0f1a;
+}
+
+.game-field {
+  width: min(800px, 95vw);
+  height: min(600px, 70vh);
+  background: #111;
+  position: relative;
+  border-radius: 16px;
+  border: #646cff solid 3px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(100, 108, 255, 0.1);
+  overflow: hidden;
+}
+
+
+.player {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transform: translate(-50%, -50%);
+}
+
+.player:hover {
+  z-index: 10;
+}
+
+.player-pixel {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.player:hover .player-pixel {
+  transform: scale(1.2);
+  box-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.3),
+    0 0 24px rgba(100, 108, 255, 0.4);
+}
+
+.player-name {
+  color: #fff;
+  font-size: 0.8rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 1;
+  transform: none;
+}
+
+.player:hover .player-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.instructions {
+  background: #1a1a2e;
+  padding: 1.5rem;
+  border-radius: 16px;
+  color: #fff;
+  width: min(800px, 95vw);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.instructions h2 {
+  margin: 0 0 1rem 0;
+  color: #646cff;
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #646cff, #535bf2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.instructions li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instructions kbd {
+  background: #1a1a2e;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  font-family: monospace;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  min-width: 24px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .instructions {
+    padding: 1rem;
+  }
+
+  .instructions h2 {
+    font-size: 1.5rem;
+  }
+} 

@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "players": {
+      ".read": true,
+      "$playerId": {
+        ".write": "!data.exists() || data.child('id').val() === $playerId",
+        ".validate": "newData.hasChildren(['id', 'name', 'x', 'y', 'color'])",
+        "id": {
+          ".validate": "newData.val() === $playerId"
+        },
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 20"
+        },
+        "x": {
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 800"
+        },
+        "y": {
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 600"
+        },
+        "color": {
+          ".validate": "newData.isString() && newData.val().matches(/^#[0-9a-fA-F]{6}$/)"
+        }
+      }
+    }
+  }
+} 
