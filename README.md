@@ -16,7 +16,7 @@ A real-time multiplayer game where players can move around space using their key
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/akhanali/muliplayer-pixel-game
 cd multiplayer-pixel-game
 ```
 
